@@ -21,6 +21,11 @@ const Header = () => {
           <ul className="flex gap-10">
             {LINKS?.map((link) => (
              <NavLink to={link.url} key={link.id} className={({ isActive }) => isActive ? "text-cyan-500" : ""}>{link.title}</NavLink>
+             ,
+              <li key={link.id} className="text-base text-gray-400 hover:text-cyan-500 transition duration-300 ease-in-out transform hover:scale-110">
+                <NavLink to={link.url}>{link.title}</NavLink>
+              </li>
+
             ))}
           </ul>
           <HeaderActions />

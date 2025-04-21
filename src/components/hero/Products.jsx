@@ -71,9 +71,10 @@ const Products = () => {
     <div className="bg-white py-20">
       <div className="max-w-[1296px] mx-auto px-4">
         <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-indigo-500 mb-8 font-orbitron">
-          Products
         </h1>
-        <ul className="flex gap-4 overflow-auto py-4 px-2 bg-transparent rounded-lg shadow-lg">
+        <div className="flex gap-12 "> 
+          <ul className=" overflow-auto py-4 px-2 bg-transparent rounded-lg shadow-lg">
+            <h3 className="w-20 h-4"><span className=" size-5">Cotegory</span></h3>
           {loading
             ? categorySkeletonArray.map((_, index) => (
                 <li
@@ -124,14 +125,16 @@ const Products = () => {
             skeletonArray.map((_, index) => (
               <div
                 key={index}
-                className="p-6 bg-gray-900 rounded-lg shadow-lg animate-pulse border border-cyan-500/20"
+                className="p-20 bg-gray-900 rounded-lg shadow-lg animate-pulse border border-cyan-500/20"
               >
                 <div className="w-full h-48 bg-gray-800 rounded-lg mb-4"></div>
-                <div className="h-6 bg-gray-800 rounded mb-2"></div>
+                <div className="h-1 bg-gray-800 rounded mb-2"></div>
                 <div className="h-4 bg-gray-800 rounded"></div>
               </div>
             ))}
         </div>
+        </div>
+       
         <div className="flex justify-center mt-8">
           <Stack spacing={2}>
             <Pagination
@@ -173,12 +176,12 @@ const Products = () => {
             <p className="text-gray-400">
               Discount: <span className="text-white">{selectedProduct.discountPercentage}%</span>
             </p>
-            <button
+            {/* <button
   className="w-full bg-cyan-500 hover:bg-cyan-600 text-white py-2 px-4 rounded-lg mt-4"
   onClick={() => navigate(`/profiles/${selectedProduct.id}`)} 
 >
   View Details
-</button>
+</button> */}
 
           </div>
         </div>

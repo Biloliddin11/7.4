@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+
+
+
 const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -9,12 +12,13 @@ const LoginForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log({ email, password });
+
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 via-black to-gray-800">
-      <form onSubmit={handleSubmit} className="bg-gray-900 p-8 rounded-lg shadow-lg w-full max-w-sm space-y-6">
-        <h2 className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-indigo-500 text-center">Login</h2>
+    <div className="min-h-screen flex items-center justify-center bg-white">
+      <form onSubmit={handleSubmit} className="bg-gray-400 p-8 rounded-lg shadow-lg w-full max-w-sm space-y-6">
+        <h2 className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-indigo-500 text-center">Login</h2>
         <div>
           <label htmlFor="email" className="block text-sm font-medium text-gray-400">Email</label>
           <input

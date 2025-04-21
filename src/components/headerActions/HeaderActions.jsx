@@ -27,11 +27,11 @@ const HeaderActions = () => {
         <input
           type="text"
           placeholder="Search"
-          className="w-full p-2 bg-white focus:ring-teal-500"
+          className="w-full p-2 bg-gray focus:ring-teal-500"
           onChange={(e) => setSearch(e.target.value)}
           onBlur={() => setSearch('')}
         />
-        <button type="button" className="p-2 bg-teal-500 text-white rounded-r-lg hover:bg-teal-600 transition duration-500 ease-in-out">
+        <button type="button" className="p-2 bg-teal-500 text-black rounded-r-lg hover:bg-teal-600 transition duration-500 ease-in-out">
           <IoSearch size={24} />
         </button>
       </form>
@@ -40,7 +40,7 @@ const HeaderActions = () => {
           {data.products.map((item) => (
             <div
               key={item.id}
-              className="flex items-center space-x-4 p-3 bg-gray-900 rounded-lg hover:bg-gray-700 transition duration-300 ease-in-out transform hover:scale-105"
+              className="flex items-center space-x-4 p-3 bg-red-900 rounded-lg hover:bg-gray-700 transition duration-300 ease-in-out transform hover:scale-105"
             >
               <img
                 src={item.thumbnail}
@@ -52,8 +52,8 @@ const HeaderActions = () => {
           ))}
         </div>
       )}
-      <NavLink to="/login" className="ml-4 text-white hover:text-teal-500 transition duration-300 ease-in-out transform hover:scale-110">
-        <RiAccountCircle2Line size={24} />
+      <NavLink to="/login" className="ml-4 text-black hover:text-teal-500 transition duration-300 ease-in-out transform hover:scale-110">
+        <RiAccountCircle2Line size={40} />
       </NavLink>
     </div>
   );
